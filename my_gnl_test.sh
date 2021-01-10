@@ -25,7 +25,7 @@ RDIR="./ress"
 DIFF="diff -q"
 
 clear
-rm -rf $LOG $RDIR/*.*
+rm -rf $LOG $RDIR/*.res
 
 echo "= Host-specific information ====================================================" >> $LOG
 echo "$> hostname; uname -msr" >> $LOG
@@ -132,7 +132,7 @@ rm -rf $OUT $OUT.dSYM
 echo
 echo >> $LOG
 
-rm -rf $RDIR/*.*
+rm -rf $RDIR/*.res
 
 echo -e "All tests completed. See the tests results in the file "$LOG
 echo
