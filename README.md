@@ -6,7 +6,7 @@ Memory leaks are checked by the mac os leaks utility and the valgrind utility, w
 
 Not an advanced developer (I'm just learning), I made this test for myself. Any comments will be greatly appreciated.
 
-1. cd to the folder with your fonctions
+1. cd to the folder with your functions
 2. git clone https://github.com/MaudClam/my_gnl_test
 3. cd my_gnl_test
 4. bash my_gnl_test.sh or my_gnl_test_bonus.sh
