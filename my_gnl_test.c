@@ -22,7 +22,7 @@ int		get_next_line(int fd, char **line);
 
 int		main(int argc, char **argv)
 {
-	char	*filename = "/Users/uru/GoogleDrive/21_Projects/get_next_line/my_gnl_test/testexts.cases/my_cases/Shakespeare_Sonnets.txt";
+	char	*filename = "Shakespeare_Sonnets.txt";
 	char	*flow;
 	int		fd;
 	char	*line;
@@ -59,7 +59,10 @@ int		main(int argc, char **argv)
 	line = NULL;
 	while ((exitcode_gnl = get_next_line(fd, &line)) > 0)
 	{
-		printf("%s\n", line);
+		if (DEBAG)
+			printf("%p %d %s\n", line, exitcode_gnl, line);
+		else
+			printf("%s\n", line);
 		free(line);
 		lines++;
 	}
@@ -69,7 +72,10 @@ int		main(int argc, char **argv)
 		close(fd);
 		return (-1);
 	}
-	printf("%s", line);
+	if (DEBAG)
+		printf("%p %d %s", line, exitcode_gnl, line);
+	else
+		printf("%s", line);
 	free(line);
 	close(fd);
 /*	The following line to find memory leaks                                   */
