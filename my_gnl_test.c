@@ -16,7 +16,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define DEBAG 0 /*	"1" - for debugging in Xcode, "0" - for Terminal          */
+#define DEBAG 0 /*	"0" - for debugging in Xcode, "0" - for Terminal          */
 
 int		get_next_line(int fd, char **line);
 
